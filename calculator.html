@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/5b4cedea2d.js" crossorigin="anonymous"></script>
+    <title>Calculator</title>
+</head>
+
+<style>
+    *{
+        margin: 0%;
+        padding: 0%;
+    }
+    body{
+        background-color: #364547;
+    }
+    /*      Styling Main div */
+    .container{
+        width: 250px;
+        height: 400px;
+        background-color: #364547;
+        margin: 30px auto;
+        border: 1px solid #364547;
+        border-radius: 2px;
+    }
+
+    /*              Styling icon div */
+    .icon_div{
+        width: 100px;
+        height: 40px;
+        background-color: #364547;
+        margin: 5px auto;
+        border-radius: 30px;
+    }
+
+    /*          styling icons  */
+
+    #icons{
+        font-size: 20px;
+        margin-left: 20px;
+        color: black;
+        margin-top: 9px;
+        cursor: pointer;
+    }
+
+    /*              styling input  */
+
+    #enter{
+        width: 200px;
+        height: 40px;
+        background-color: #364547;
+        border: none;
+        outline: none;
+        border-bottom: 2px solid #707070;
+        border-width: 100%;
+    }
+
+
+    /*          styling button */
+
+   
+    #fbtn{
+        width: 59px;
+        height: 59px;
+        background-color: #222831 ;
+        border: none;
+        outline: none;
+        border-radius: 50%;
+        cursor: pointer;
+        color: white;
+    }
+
+    
+
+    /*              styling clear button */
+
+    #clear{
+        width: 45px;
+        height: 40px;
+        border: none;
+        outline: none;
+        background-color: #1f441e;
+        cursor: pointer;
+        color: white;
+    }
+
+  
+   
+  
+
+    /* Main heading styling */
+
+    #heading{
+        font-family: Arial;
+        text-align: center;
+        margin-top: 50px;
+        color: #f48b29;
+    }
+
+</style>
+<body>
+  
+
+
+    <h1 id="heading">Calculator</h1>
+    <div class="container" id="main">
+        <div class="icon_div" id="i_d">
+            <i id="icons" class="fas fa-sun" onclick="day()"></i>
+            <i id="icons" class="fas fa-cloud-moon" onclick="night(this)"></i>
+        </div>
+
+        <form name = "forms">
+            <input type="text" name="answer" id="enter">  <input id="clear" type="button" value="C" onclick="forms.answer.value = ' '">   <br><br>
+            <input id="fbtn" type="button" value="1" onclick="forms.answer.value += '1'">
+            <input id="fbtn" type="button" value="2" onclick="forms.answer.value += '2'">
+            <input id="fbtn" type="button" value="3" onclick="forms.answer.value += '3'">
+            <input id="fbtn"  type="button" value="+" onclick="forms.answer.value += '+'">
+
+            <br><br>
+            <input id="fbtn" type="button" value="4" onclick="forms.answer.value += '4'">
+            <input id="fbtn" type="button" value="5" onclick="forms.answer.value += '5'">
+            <input id="fbtn" type="button" value="6" onclick="forms.answer.value += '6'">
+            <input id="fbtn" type="button" value="-" onclick="forms.answer.value += '-'">
+
+            <br><br>
+            <input id="fbtn" type="button" value="7" onclick="forms.answer.value += '7'">
+            <input id="fbtn" type="button" value="8" onclick="forms.answer.value += '8'">
+            <input id="fbtn" type="button" value="9" onclick="forms.answer.value += '9'">
+            <input id="fbtn" type="button" value="*" onclick="forms.answer.value += '*'">
+
+
+            <br><br>
+            <input id="fbtn" class="unique" type="button" value="/" onclick="forms.answer.value += '/'">
+            <input id="fbtn" type="button" value="0" onclick="forms.answer.value += '0'">
+            <input id="fbtn" type="button" value="00" onclick="forms.answer.value += '00'">
+            <input id="fbtn" type="button" value="=" onclick="forms.answer.value = eval(forms.answer.value)">
+
+        </form>
+    </div>
+</body>
+
+
+
+
+
+
+
+<script>
+    // var x = document.querySelectorAll('#icons')[0];
+    document.querySelectorAll('#fbtn')[3].style.backgroundColor = '#206a5d'
+    document.querySelectorAll('#fbtn')[7].style.backgroundColor = '#206a5d'
+    document.querySelectorAll('#fbtn')[11].style.backgroundColor = '#206a5d'
+    document.querySelectorAll('#fbtn')[12].style.backgroundColor = '#206a5d'
+    document.querySelectorAll('#fbtn')[15].style.backgroundColor = '#206a5d'
+    document.getElementById('clear').style.backgroundColor = '#206a5d'
+
+
+
+
+
+    
+    function day()
+    {
+        document.getElementById('main').style.backgroundColor = 'white';
+        document.getElementById('main').style.border = '1px solid white';
+        document.getElementById('enter').style.backgroundColor = 'white';
+        document.querySelectorAll('#fbtn')[0].style.backgroundColor = '#f4f9f9'
+        document.querySelectorAll('#fbtn')[0].style.color = 'black'
+        document.querySelectorAll('#fbtn')[1].style.backgroundColor = '#f4f9f9'
+        document.querySelectorAll('#fbtn')[1].style.color = 'black'
+        document.querySelectorAll('#fbtn')[2].style.backgroundColor = '#f4f9f9'
+        document.querySelectorAll('#fbtn')[2].style.color = 'black'
+        document.querySelectorAll('#fbtn')[3].style.backgroundColor = '#206a5d'
+        document.querySelectorAll('#fbtn')[3].style.color = 'black'
+        document.querySelectorAll('#fbtn')[4].style.backgroundColor = '#f4f9f9'
+        document.querySelectorAll('#fbtn')[4].style.color = 'black'
+        document.querySelectorAll('#fbtn')[5].style.backgroundColor = '#f4f9f9'
+        document.querySelectorAll('#fbtn')[5].style.color = 'black'
+        document.querySelectorAll('#fbtn')[6].style.backgroundColor = '#f4f9f9'
+        document.querySelectorAll('#fbtn')[6].style.color = 'black'
+        document.querySelectorAll('#fbtn')[7].style.backgroundColor = '#206a5d'
+        document.querySelectorAll('#fbtn')[7].style.color = 'black'
+        document.querySelectorAll('#fbtn')[8].style.backgroundColor = '#f4f9f9'
+        document.querySelectorAll('#fbtn')[8].style.color = 'black'
+        document.querySelectorAll('#fbtn')[9].style.backgroundColor = '#f4f9f9'
+        document.querySelectorAll('#fbtn')[9].style.color = 'black'
+        document.querySelectorAll('#fbtn')[10].style.backgroundColor = '#f4f9f9'
+        document.querySelectorAll('#fbtn')[10].style.color = 'black'
+        document.querySelectorAll('#fbtn')[11].style.backgroundColor = '#206a5d'
+        document.querySelectorAll('#fbtn')[11].style.color = 'black'
+        document.querySelectorAll('#fbtn')[12].style.backgroundColor = '#206a5d'
+        document.querySelectorAll('#fbtn')[12].style.color = 'black'
+        document.querySelectorAll('#fbtn')[13].style.backgroundColor = '#f4f9f9'
+        document.querySelectorAll('#fbtn')[13].style.color = 'black'
+        document.querySelectorAll('#fbtn')[14].style.backgroundColor = '#f4f9f9'
+        document.querySelectorAll('#fbtn')[14].style.color = 'black'
+        document.querySelectorAll('#fbtn')[15].style.backgroundColor = '#206a5d'
+        document.querySelectorAll('#fbtn')[15].style.color = 'black'
+        document.getElementById('clear').style.backgroundColor = '#206a5d'
+        document.getElementById('clear').style.color = 'black'
+        document.body.style.backgroundColor = 'white'
+        document.getElementById('i_d').style.backgroundColor = 'white'
+    }
+
+    function night(x)
+    {
+        document.getElementById('main').style.backgroundColor = '#364547';
+        document.getElementById('main').style.border = '1px solid #364547';
+        document.getElementById('enter').style.backgroundColor = '#364547';
+        document.querySelectorAll('#fbtn')[0].style.backgroundColor = '#222831'
+        document.querySelectorAll('#fbtn')[0].style.color = 'white'
+
+        document.querySelectorAll('#fbtn')[1].style.backgroundColor = '#222831'
+        document.querySelectorAll('#fbtn')[1].style.color = 'white'
+        document.querySelectorAll('#fbtn')[2].style.backgroundColor = '#222831'
+        document.querySelectorAll('#fbtn')[2].style.color = 'white'
+        document.querySelectorAll('#fbtn')[3].style.backgroundColor = '#206a5d'
+        document.querySelectorAll('#fbtn')[3].style.color = 'white'
+        document.querySelectorAll('#fbtn')[4].style.backgroundColor = '#222831'
+        document.querySelectorAll('#fbtn')[4].style.color = 'white'
+        document.querySelectorAll('#fbtn')[5].style.backgroundColor = '#222831'
+        document.querySelectorAll('#fbtn')[5].style.color = 'white'
+        document.querySelectorAll('#fbtn')[6].style.backgroundColor = '#222831'
+        document.querySelectorAll('#fbtn')[6].style.color = 'white'
+        document.querySelectorAll('#fbtn')[7].style.backgroundColor = '#206a5d'
+        document.querySelectorAll('#fbtn')[7].style.color = 'white'
+        document.querySelectorAll('#fbtn')[8].style.backgroundColor = '#222831'
+        document.querySelectorAll('#fbtn')[8].style.color = 'white'
+        document.querySelectorAll('#fbtn')[9].style.backgroundColor = '#222831'
+        document.querySelectorAll('#fbtn')[9].style.color = 'white'
+        document.querySelectorAll('#fbtn')[10].style.backgroundColor = '#222831'
+        document.querySelectorAll('#fbtn')[10].style.color = 'white'
+        document.querySelectorAll('#fbtn')[11].style.backgroundColor = '#206a5d'
+        document.querySelectorAll('#fbtn')[11].style.color = 'white'
+        document.querySelectorAll('#fbtn')[12].style.backgroundColor = '#206a5d'
+        document.querySelectorAll('#fbtn')[12].style.color = 'white'
+        document.querySelectorAll('#fbtn')[13].style.backgroundColor = '#222831'
+        document.querySelectorAll('#fbtn')[13].style.color = 'white'
+        document.querySelectorAll('#fbtn')[14].style.backgroundColor = '#222831'
+        document.querySelectorAll('#fbtn')[14].style.color = 'white'
+        document.querySelectorAll('#fbtn')[15].style.backgroundColor = '#206a5d'
+        document.querySelectorAll('#fbtn')[15].style.color = 'white'
+        document.getElementById('clear').style.backgroundColor = '#206a5d'
+        document.getElementById('clear').style.color = 'white'
+
+        document.body.style.backgroundColor ='#364547'
+        document.getElementById('i_d').style.backgroundColor = '#364547'
+
+
+
+        
+    }
+</script>
+</html>
